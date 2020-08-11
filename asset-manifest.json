@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Haugety/mesto-react/static/css/main.40d8aa02.chunk.css",
-    "main.js": "/Haugety/mesto-react/static/js/main.88a04766.chunk.js",
-    "main.js.map": "/Haugety/mesto-react/static/js/main.88a04766.chunk.js.map",
+    "main.js": "/Haugety/mesto-react/static/js/main.27e2ecc2.chunk.js",
+    "main.js.map": "/Haugety/mesto-react/static/js/main.27e2ecc2.chunk.js.map",
     "runtime-main.js": "/Haugety/mesto-react/static/js/runtime-main.198bfefc.js",
     "runtime-main.js.map": "/Haugety/mesto-react/static/js/runtime-main.198bfefc.js.map",
     "static/js/2.8b66efd4.chunk.js": "/Haugety/mesto-react/static/js/2.8b66efd4.chunk.js",
     "static/js/2.8b66efd4.chunk.js.map": "/Haugety/mesto-react/static/js/2.8b66efd4.chunk.js.map",
     "index.html": "/Haugety/mesto-react/index.html",
-    "precache-manifest.de69627e180ea1121355d477b0c48ce6.js": "/Haugety/mesto-react/precache-manifest.de69627e180ea1121355d477b0c48ce6.js",
+    "precache-manifest.fd7111e9fdcc52d5b364bae8428e4e5b.js": "/Haugety/mesto-react/precache-manifest.fd7111e9fdcc52d5b364bae8428e4e5b.js",
     "service-worker.js": "/Haugety/mesto-react/service-worker.js",
     "static/css/main.40d8aa02.chunk.css.map": "/Haugety/mesto-react/static/css/main.40d8aa02.chunk.css.map",
     "static/js/2.8b66efd4.chunk.js.LICENSE.txt": "/Haugety/mesto-react/static/js/2.8b66efd4.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.198bfefc.js",
     "static/js/2.8b66efd4.chunk.js",
     "static/css/main.40d8aa02.chunk.css",
-    "static/js/main.88a04766.chunk.js"
+    "static/js/main.27e2ecc2.chunk.js"
   ]
 }
