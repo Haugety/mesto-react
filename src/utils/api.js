@@ -1,4 +1,4 @@
-import options from './data.js';
+import options from './data';
 
 class Api {
   constructor(options) {
@@ -10,10 +10,10 @@ class Api {
       headers: this._options.headers
     })
     .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
+      if (!res.ok) {
+        return Promise.reject(`Ошибка: ${res.status}`);
+    }
+    return res.json();
     });
   }
 
@@ -27,10 +27,10 @@ class Api {
       })
     })
     .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
+      if (!res.ok) {
+        return Promise.reject(`Ошибка: ${res.status}`);
+    }
+    return res.json();
     });
   }
 
@@ -43,10 +43,10 @@ class Api {
       })
     })
     .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
+      if (!res.ok) {
+        return Promise.reject(`Ошибка: ${res.status}`);
+    }
+    return res.json();
     });
   }
 
@@ -55,10 +55,10 @@ class Api {
       headers: this._options.headers
     })
     .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
+      if (!res.ok) {
+        return Promise.reject(`Ошибка: ${res.status}`);
+    }
+    return res.json();
     });
   }
 
@@ -72,10 +72,10 @@ class Api {
       })
     })
     .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
+      if (!res.ok) {
+        return Promise.reject(`Ошибка: ${res.status}`);
+    }
+    return res.json();
     });
   }
 
@@ -85,38 +85,42 @@ class Api {
       headers: this._options.headers
     })
     .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
+      if (!res.ok) {
+        return Promise.reject(`Ошибка: ${res.status}`);
+    }
+    return res.json();
     });
   }
 
-  putLike = (cardId) => {
-    return fetch(`${this._options.baseUrl}/cards/likes/${cardId}`, {
-      method: 'PUT',
-      headers: this._options.headers
-    })
-    .then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
-  }
+  changeLikeCardStatus = (cardId, isLiked) => {
+    if (!isLiked) {
 
-  removeLike = (cardId) => {
-    return fetch(`${this._options.baseUrl}/cards/likes/${cardId}`, {
-      method: 'DELETE',
-      headers: this._options.headers
-    })
-    .then((res) => {
-      if (res.ok) {
-        return res.json();
+      return fetch(`${this._options.baseUrl}/cards/likes/${cardId}`, {
+        method: 'PUT',
+        headers: this._options.headers
+      })
+      .then((res) => {
+        if (!res.ok) {
+          return Promise.reject(`Ошибка: ${res.status}`);
       }
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+      return res.json();
+      });
 
+    }
+    else {
+
+      return fetch(`${this._options.baseUrl}/cards/likes/${cardId}`, {
+        method: 'DELETE',
+        headers: this._options.headers
+      })
+      .then((res) => {
+        if (!res.ok) {
+          return Promise.reject(`Ошибка: ${res.status}`);
+      }
+      return res.json();
+      });
+
+    }
   }
 
 }

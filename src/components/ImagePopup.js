@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 function ImagePopup({ isOpen, selectedCardLink, selectedCardName, onClose }) {
   return (
 
-    <section className={`popup ${isOpen ? "popup_opened" : ""}`}>
+    <section className={`popup ${isOpen && "popup_opened"}`}>
       <figure className="popup__image-container">
         <img alt={ selectedCardName } src={ selectedCardLink } className="popup__image" />
         <figcaption className="popup__caption">{ selectedCardName }</figcaption>
