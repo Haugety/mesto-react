@@ -194,7 +194,6 @@ function App() {
           onCardDelete={handleDeletedCard}
         />
 
-
         <EditAvatarPopup
           isOpen={isEditAvatarPopupOpen}
           onClose={closeAllPopups}
